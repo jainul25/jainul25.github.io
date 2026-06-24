@@ -267,32 +267,6 @@
   .tl-step h6 { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; color: var(--text); margin-bottom: 6px; }
   .tl-step p { font-size: 13px; color: var(--muted); text-align: center; line-height: 1.55; }
 
-  /* ============ IMPACT ============ */
-  .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-  .impact-card { background: var(--bg-2); padding: 36px 28px; transition: background 0.3s ease; }
-  .impact-card:hover { background: var(--bg); }
-  .impact-num { font-family: var(--mono); font-size: 42px; font-weight: 600; letter-spacing: -0.04em; color: var(--text); margin-bottom: 12px; line-height: 1; }
-  .impact-card:nth-child(1) .impact-num .pre { color: var(--accent); }
-  .impact-card:nth-child(2) .impact-num .pre { color: #8a6fb0; }
-  .impact-card:nth-child(3) .impact-num .pre { color: #6a8a6a; }
-  .impact-card:nth-child(4) .impact-num .pre { color: #c4a560; }
-  .impact-label { font-size: 13px; color: var(--muted); line-height: 1.5; }
-  @media (max-width: 860px) { .impact-grid { grid-template-columns: repeat(2, 1fr); } }
-
-  /* ============ ABOUT ============ */
-  .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
-  .about-aside { position: sticky; top: 100px; }
-  .about-card { border: 1px solid var(--line); border-radius: 8px; padding: 28px; background: var(--bg-2); font-family: var(--mono); font-size: 13px; }
-  .about-card .row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--line); }
-  .about-card .row:last-child { border-bottom: none; }
-  .about-card .key { color: var(--dim); }
-  .about-card .val { color: var(--text); }
-  .about-card .val.green { color: #6a8a6a; }
-  .about-text p { font-size: 17px; color: var(--muted); margin-bottom: 24px; line-height: 1.7; }
-  .about-text p strong { color: var(--text); font-weight: 500; }
-  .about-text p:first-child { color: var(--text); font-size: 22px; line-height: 1.5; font-weight: 400; letter-spacing: -0.01em; }
-  @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 48px; } .about-aside { position: static; } }
-
   /* ============ STACK ============ */
   .stack-section { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-3); }
   .stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
@@ -346,9 +320,7 @@
     <div class="nav-links">
       <a href="#principles"><span>01.</span>Principles</a>
       <a href="#projects"><span>02.</span>Projects</a>
-      <a href="#impact"><span>03.</span>Impact</a>
-      <a href="#about"><span>04.</span>About</a>
-      <a href="#stack"><span>05.</span>Stack</a>
+      <a href="#stack"><span>03.</span>Stack</a>
     </div>
     <a href="#contact" class="nav-cta">contact →</a>
   </div>
@@ -1142,54 +1114,6 @@
           </div>
         </div></div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- =================== IMPACT =================== -->
-<section id="impact">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <div class="section-label">// the scoreboard</div>
-        <h2 class="section-title">The numbers, before you ask.</h2>
-      </div>
-      <div class="section-meta">[ output → outcome ]</div>
-    </div>
-    <div class="impact-grid reveal">
-      <div class="impact-card"><div class="impact-num"><span class="pre">08</span></div><div class="impact-label">Projects across enterprise GTM, transformation, data, AI, venture, fintech &amp; marketplace.</div></div>
-      <div class="impact-card"><div class="impact-num"><span class="pre">15</span>+</div><div class="impact-label">Businesses digitally transformed across 5 sectors.</div></div>
-      <div class="impact-card"><div class="impact-num"><span class="pre">300</span>K+</div><div class="impact-label">Students reached through the STEMbotix robotics + AI ecosystem.</div></div>
-      <div class="impact-card"><div class="impact-num"><span class="pre">1</span>×</div><div class="impact-label">Venture co-founded and sold — full founder-to-exit journey.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== ABOUT =================== -->
-<section id="about">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <div class="section-label">// the human behind it</div>
-        <h2 class="section-title">Technology should kill friction, not invent new kinds.</h2>
-      </div>
-      <div class="section-meta">[ the human ]</div>
-    </div>
-    <div class="about-grid reveal">
-      <aside class="about-aside">
-        <div class="about-card">
-          <div class="row"><span class="key">name</span><span class="val">Jainul Thakar</span></div>
-          <div class="row"><span class="key">works at</span><span class="val">Product · Business · Tech</span></div>
-          <div class="row"><span class="key">focus</span><span class="val">Accessible systems</span></div>
-          <div class="row"><span class="key">geo</span><span class="val">India ↔ Canada</span></div>
-          <div class="row"><span class="key">projects</span><span class="val">08 featured</span></div>
-        </div>
-      </aside>
-      <div class="about-text">
-        <p>I am a technologist by craft, a product person by habit, and a business operator because good ideas still need distribution, adoption, and a way to survive Monday morning. I like the messy middle where user needs, technical constraints, market reality, and implementation details all show up at the same meeting.</p>
-        <p>My work has moved across SMB digital transformation, revenue intelligence, AI learning products, robotics kits, fintech workflows, internal tools, marketplace concepts, and venture building. I have worked with teams and brands including <strong>Canon Canada</strong>, <strong>Bell Canada</strong>, <strong>STEMbotix</strong>, and <strong>Truusome</strong>, usually in roles where the job is not just to make the thing, but to make the thing make sense.</p>
-        <p>The thread is simple: I build systems that are accessible enough to start using, adoptable enough to keep using, and scalable enough to matter. That means I care about the architecture, the workflow, the rollout, the story, the numbers, and occasionally the tiny button label that decides whether anyone clicks.</p>
-      </div>
     </div>
   </div>
 </section>
