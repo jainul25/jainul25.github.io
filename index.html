@@ -2,8 +2,8 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jainul Thakar | Product · Business · Technology</title>
-<meta name="description" content="Jainul Thakar, a technologist building accessible and adoptable systems for humanity. Product, business, and technology at the intersection.">
+<title>Jainul Thakar | AI-Native Product Builder</title>
+<meta name="description" content="Jainul Thakar — an AI-native product builder shipping zero-to-one to scale. AI learning tools, robotics, revenue systems, fintech, and a venture exit.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -324,6 +324,15 @@
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
   .visual { width: 100%; height: auto; display: block; }
+
+  /* show 4 + view more */
+  .project.extra { display: none; }
+  .project-list.show-all .project.extra { display: block; }
+  .more-row { grid-column: 1 / -1; display: flex; justify-content: center; padding: 4px 0; }
+  .more-btn { font-family: var(--mono); font-size: 13px; color: var(--text); background: var(--bg-2); border: 1px solid var(--line-2); border-radius: 8px; padding: 13px 26px; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 10px; }
+  .more-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .more-btn .arr { transition: transform 0.3s ease; font-size: 11px; }
+  .project-list.show-all .more-btn .arr { transform: rotate(180deg); }
 </style>
 </head>
 <body>
@@ -347,13 +356,13 @@
   <div class="container hero-grid">
     <div>
       <h1 class="hero-title">
-        A technologist building<br>
-        <span class="accent">accessible</span> and <span class="accent">adoptable</span><br>
-        systems for <span class="lav">humanity</span><span class="cursor"></span>
+        I build <span class="accent">AI-native</span> products —<br>
+        from <span class="accent">0&#8594;1</span> to<br>
+        <span class="lav">real scale</span><span class="cursor"></span>
       </h1>
 
       <p class="hero-sub">
-        I'm <strong>Jainul Thakar</strong>, an <strong>AI Native</strong> builder working where <strong>product</strong>, <strong>business</strong>, and <strong>technology</strong> overlap. I turn messy ideas, scattered workflows, and ambitious "what ifs" into systems people can understand, adopt, and scale. Some days that means AI learning tools and robotics kits; other days it is revenue dashboards, venture ops, fintech workflows, or automation that quietly saves everyone from another spreadsheet. The goal is always the same: make the work useful, usable, and ready to grow.
+        I'm <strong>Jainul Thakar</strong> — an <strong>AI-native product builder</strong>. I take ambiguous, zero-to-one problems and ship products people actually adopt: AI learning tools, robotics, revenue systems, fintech. Shipped to <strong>300K+ students</strong>, owned products end-to-end (architecture &#8594; evals &#8594; GTM), and co-founded a venture to a clean exit. User-obsessed, high-agency, and allergic to anything that doesn't ship.
       </p>
 
       <div class="hero-stats">
@@ -424,7 +433,7 @@
         <div class="section-label">// the receipts</div>
         <h2 class="section-title">The work. Click any card to pop the hood.</h2>
       </div>
-      <div class="section-meta">[ 08 projects ]</div>
+      <div class="section-meta">[ 4 shown · 8 builds ]</div>
     </div>
 
     <div class="project-list reveal">
@@ -775,9 +784,12 @@
         </div></div>
       </article>
 
+      <div class="more-row">
+        <button class="more-btn" onclick="toggleMore(this)"><span class="lbl">View 4 more builds</span> <span class="arr">▾</span></button>
+      </div>
 
       <!-- ============ 05 SMB ============ -->
-      <article class="project">
+      <article class="project extra">
         <div class="project-summary" onclick="toggleProject(this)">
           <div class="project-num">05</div>
           <div class="project-head">
@@ -910,7 +922,7 @@
 
 
       <!-- ============ 06 RevOps ============ -->
-      <article class="project">
+      <article class="project extra">
         <div class="project-summary" onclick="toggleProject(this)">
           <div class="project-num">06</div>
           <div class="project-head">
@@ -1006,7 +1018,7 @@
 
 
       <!-- ============ 07 XS: Access ============ -->
-      <article class="project">
+      <article class="project extra">
         <div class="project-summary" onclick="toggleProject(this)">
           <div class="project-num">07</div>
           <div class="project-head">
@@ -1082,7 +1094,7 @@
 
 
       <!-- ============ 08 Internal Task Mgmt ============ -->
-      <article class="project">
+      <article class="project extra">
         <div class="project-summary" onclick="toggleProject(this)">
           <div class="project-num">08</div>
           <div class="project-head">
@@ -1194,6 +1206,7 @@
 
 <script>
   function toggleProject(el) { el.closest('.project').classList.toggle('open'); }
+  function toggleMore(btn) { const list = btn.closest('.project-list'); const open = list.classList.toggle('show-all'); btn.querySelector('.lbl').textContent = open ? 'Show fewer builds' : 'View 4 more builds'; }
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.08 });
@@ -1209,4 +1222,5 @@
 
 
 
-</body><div id="codex-browser-sidebar-comments-root" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483647;"></div></html>
+</body>
+</html>
