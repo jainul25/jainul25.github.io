@@ -96,7 +96,6 @@
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
   .btn .arrow { transition: transform 0.2s ease; }
   .btn:hover .arrow { transform: translateX(3px); }
-  .proof-strip { display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: var(--mono); font-size: 12px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 24px; }
   .hero-stats { display: flex; flex-wrap: wrap; gap: 18px 44px; margin: 4px 0 40px; }
   .hstat .hn { font-family: var(--mono); font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
   .hstat:nth-child(1) .hn { color: var(--accent); }
@@ -104,15 +103,6 @@
   .hstat:nth-child(3) .hn { color: #8a6fb0; }
   .hstat:nth-child(4) .hn { color: #c4a560; }
   .hstat .hl { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 7px; }
-  .proof-strip span { display: inline-flex; align-items: center; gap: 8px; }
-  .proof-strip span::before { content: ''; width: 6px; height: 6px; border-radius: 50%; }
-  .proof-strip span:nth-child(1)::before { background: var(--accent); }
-  .proof-strip span:nth-child(2)::before { background: var(--sage); }
-  .proof-strip span:nth-child(3)::before { background: var(--lavender); }
-  .proof-strip span:nth-child(4)::before { background: var(--butter); }
-  .proof-strip span:nth-child(5)::before { background: var(--sky); }
-  .proof-strip span:nth-child(6)::before { background: var(--blush); }
-  .proof-strip span:nth-child(7)::before { background: var(--accent-dim); }
 
   /* ============ SECTION ============ */
   section { padding: 120px 0; position: relative; }
@@ -121,10 +111,8 @@
   .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 56px; border-bottom: 1px solid var(--line); padding-bottom: 24px; gap: 32px; }
   .section-label { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-bottom: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
   .section-title { font-size: clamp(28px, 4vw, 44px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; max-width: 780px; }
-  .section-meta { font-family: var(--mono); font-size: 12px; color: var(--dim); white-space: nowrap; }
   @media (max-width: 720px) {
     .section-head { flex-direction: column; align-items: flex-start; gap: 12px; }
-    .section-meta { white-space: normal; }
   }
 
   /* ============ PRINCIPLES ============ */
